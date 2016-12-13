@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<params>
+	<!-- 文件上传类型限制 -->
+	<allow-doc>doc,pdf,excel,ppt,docx,zip,rar</allow-doc>
+	<!-- 图片上传类型限制 -->
+	<allow-image>jpg,jpeg,png,gif</allow-image>
+	<!-- 文件上传大小限制 ,单位为M-->
+	<allow-size>20</allow-size>
+	<!-- 文件数量限制 -->
+	<allow-num>20</allow-num>
+	<!-- 文件存储根路径 -->
+	<filePath>D:/files</filePath>
+	<!-- 是否根据模块划分存储路径，默认为true -->
+	<isModule>true</isModule>
+	<!-- 是否根据功能划分存储路径，默认为true -->
+	<isFunction>true</isFunction>
+	<!-- 是否根据Year划分存储路径，默认为true -->
+	<isYear>true</isYear>
+	<!-- 是否根据Month划分存储路径,默认为true -->
+	<isMonth>true</isMonth>
+	<!-- 是否根据Day划分存储路径，默认为false -->
+	<isDay>false</isDay>
+	<!-- 遇到同名文件是否覆盖，默认覆盖，不覆盖则生成新文件名：XXXXX_year||month||day_hour||minute||second.xxx -->
+	<isRecover>true</isRecover>
+	<!-- 运行环境优先级,plupload支持(flash,html4,html5,gears,silverlight,browersplus),这里暂只支持(flash,html4,html5) -->
+	<runtimes>flash,html4,html5</runtimes>	
+</params>

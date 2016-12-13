@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="hanmote"
+  id="myeclipse.1452051145281"
+  context-root="/hanmote"
+  j2ee-spec="6.0"
+  archive="hanmote.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

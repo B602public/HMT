@@ -1,0 +1,100 @@
+/* right区域的样式 */
+
+.topBox { height:88px;background:url("../images/back/topbg.gif") repeat-x;}
+.topLeft{ height:88px;background:url("../images/back/topleft.jpg") no-repeat;float: left;width: 320px;}
+.functionNav{ float:left;position:absolute;left:320px;height: 88px;display: block;}
+.functionNav li{ float:left;width: 86px;height: 88px;display: block;text-align: center;}
+.functionNav li a { display: block;width: 87px;height: 88px;text-decoration: none;}
+.functionNav img{ margin-top: 10px;}
+.selected{background: url("../images/back/navbg.png") no-repeat;}
+.functionFont{ font-size: 14px;color: #D6E8F1;}
+.topRight{ height:88px;float:right;background: url("../images/back/topright.jpg") no-repeat right;}
+.topRight ul{ float:right;padding-top: 15px;padding-right: 12px;display: block;}
+.topRight ul li{float:left;padding:0 9px;background: url("../images/back/line.gif")
+no-repeat scroll right center}
+.topRight ul li a{ font-size: 14px; color: #E9F2F7;text-decoration: none;}
+.topRight ul li:last-child { background: transparent none repeat scroll 0% 0%;}
+.userDiv{ clear: both; height: 30px;background: url("../images/back/ub1.png");float:right;margin-top:10px;
+border-radius: 30px;position: relative;}
+.userDiv span{ display: inline-block;padding-right: 10px;background: url("../images/back/user.png") no-repeat 
+scroll 15px 10px;line-height: 30px;font-size: 14px;color: #B8CEDA;padding-left: 35px;}
+.userDiv i{ display: inline-block;margin-right:5px;line-height: 30px;font-size: 14px;color: #B8CEDA;}
+.userDiv b{display: inline-block;width: 20px;height: 18px;background: url("../images/back/msg.png");
+text-align:center;margin-right:13px;font-size: 14px;color:#fff;margin-top:7px;line-height: 18px;}
+.leftBox{ width:186px;height:40px;background: url("../images/back/lefttop.gif") repeat-x;color:#fff;font-size:14px;
+line-height: 40px;}
+.leftBox .functionico{ display:block;margin:10px 8px 0 0;background: url("../images/back/leftico.png") no-repeat; width:20px;
+height:21px;float:left;}
+.leftMenu { overflow: hidden;background: url("../images/back/leftline.gif") repeat-y;display:block;}
+.leftMenu dd{display:block;line-height: 20px;font-size: 14px;}
+.leftMenu .title{ cursor:pointer;color: #000;}
+.title span {display:block;float:left; margin:8px 8px 0 12px;}
+.menuson{line-height:30px;background:#D9EBF3;}
+.menuson li{ cursor:pointer;}
+.menuson li.active{position:relative; background:url("../images/back/libg.png") repeat-x; line-height:30px; color:#fff;}
+.menuson li cite{display:block; float:left; margin-left:32px; background:url("../images/back/list.gif") no-repeat; width:16px; height:16px; margin-top:7px;}
+.menuson li.active cite{background:url("../images/back/list1.gif") no-repeat;}
+.menuson li.active i{display:block; background:url("../images/back/sj.png") no-repeat; width:6px; height:11px; position:absolute; right:0;z-index:10000; top:9px; right:-1px;}
+.menuson li a{ display:block; *display:inline; *padding-top:5px;}
+.menuson li.active a{color:#fff;}
+.menuson li .header{height:30px;}
+.menuson li .submenus{background:#d9ebf3;padding:10px 0;border-bottom:1px solid #b7d5df;}
+.menuson li .submenus li{height:25px;line-height:25px;padding-left:48px;border-left:1px solid #d9ebf3;}
+.menuson li .submenus li.active{position:relative;right:-1px;border-left:none;background:#fff;}
+.menuson li .submenus li a{padding-left:9px;color:#000000; background:url("../images/back/sub-menu-icon.png") 0 12px no-repeat;}
+.menuson li .submenus li a:hover{color:#238ac5;}
+.menuson li .submenus li.active a{color:#238ac5;}
+.menuson li.active.open cite{margin-top:12px;margin-left:37px; background:url("../images/back/jtx.png") no-repeat;}
+.bq{display:block;float:right;margin-right:10px;}
+.place{height:40px; background:url(../images/back/righttop.gif) repeat-x;}
+.place span{line-height:40px; font-weight:bold;float:left; margin-left:12px;}
+.placeul li{float:left; line-height:40px; padding-left:7px; padding-right:12px; background:url(../images/back/rlist.gif) no-repeat right;}
+.placeul li:last-child{background:none;}
+.maindiv{ padding:10px;}
+
+
+.formtitle,.formtitle1{border-bottom:solid 1px #d0dee5; line-height:35px; position:relative; height:35px; margin-bottom:28px;}
+.formtitle1{margin-bottom:15px;}
+.formtitle span,.formtitle1 span{font-weight:bold;font-size:14px; border-bottom:solid 3px #66c9f3;float:left; position:absolute; z-index:100; bottom:-1px; padding:0 3px; height:30px; line-height:30px;}
+
+
+.regContent{height:960px;}
+.frmBox{height:auto;margin-left:30px;}
+.leftContent{float:left;margin-left:50px;width:400px;height:100px;}
+.leftContent img{display:block;width:106px;height:100px;}
+.userTitle{height:48px;line-height:48px;font-size:16px;font-family:"΢���ź�";}
+.userName{height:48px;line-height:48px;font-size:16px;font-family:"΢���ź�";padding-left:30px;}
+.frmContent{float:left;width:100%;}
+.space{margin-top:30px;line-height:20px;}
+.menu1Box{float:left;width:200px;height:400px;}
+.menu1 {list-style:none;margin:0 auto;height:100%;width:200px;}
+.menu1 li{ height:30px;width:180px;margin: 10 auto; text-align:center;float:left;font-size:16px;line-height:16px;}
+.menu1 li a{text-decoration:none;}
+.menu1 li a:hover{color:#CC0000;}
+.regLine{ border:solid 1px #eee;margin-top:2px;}
+.rowTitle{ padding:4px 0 2px 2px;font-size:18px;line-height:18px;font-weight:bold;}
+.row1{float:left;padding:5px;text-align:center;height:30px;line-height:30px;}
+.row2{float:left;height:30px;}
+.cl{clear: both;}
+.row2 input,select{ margin-top:10px;}
+.wd120{width:120px;}
+.wd100{width:100px;}
+.wd160{width:160px;}
+.hg100{height:100px;}
+.hg150{height:150px;}
+.hg200{height:200px;}
+.hg250{height:250px;}
+.hg300{height:300px;}
+.hg500{height:500px;}
+.hg600{height:600px;}
+.hg750{height:750px;}
+.sellen154{ width:154px;}
+.sellen100{ width:100px;}
+.upload{ display:block;width:72px;height:72px;background:url(../images/upload.png)}
+.tablelist{border:solid 1px #cbcbcb; width:100%; clear:both;}
+.tablelist th{background:url(../images/back/th.gif) repeat-x; height:34px; line-height:34px; border-bottom:solid 1px #b6cad2; text-indent:11px; text-align:left;}
+.tablelist td{line-height:35px; text-indent:11px; border-right: dotted 1px #c7c7c7;}
+.tablelink{color:#056dae;}
+.tablelist tbody tr.odd{background:#f5f8fa;}
+.tablelist tbody tr:hover{background:#e5ebee;}
+

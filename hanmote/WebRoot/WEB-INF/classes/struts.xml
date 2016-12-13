@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<!-- 指定Web应用的默认编码集,相当于调用HttpServletRequest的setCharacterEncoding方法 -->
+    <constant name="struts.i18n.encoding" value="UTF-8" />
+    <!-- 当struts的配置文件修改后,系统是否自动重新加载该文件,默认值为false(生产环境下使用),开发阶段最好打开 -->
+    <constant name="struts.configuration.xml.reload" value="true" />
+    <!-- 开发模式下使用,这样可以打印出更详细的错误信息 
+    <constant name="struts.devMode" value="true" />
+	<constant name="struts.action.extension" value="action"></constant>  
+	-->
+    
+    <!-- 上传文件是所允许的文件最大值 -->  
+    <constant name="struts.multipart.maxSize" value="40000000"></constant>  
+    <!-- 设置文件上传时的临时文件夹时F盘下的temp文件夹 -->  
+    <constant name="struts.multipart.saveDir" value="F:\\temp"></constant>  
+	<!-- 配置常量package -->
+	
+	<!-- 让struts2支持动态方法调用 
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	-->
+	
+    <package name="default" namespace="/" extends="struts-default">
+		<!-- 配置action -->
+		<action name="user_list" class="com.hanmote.action.UserAction" method="list">
+			<result name="success" type="dispatcher">/list.jsp</result>
+		</action>
+		<action name="user_dgList" class="com.hanmote.action.UserAction" method="dgList">
+			<result name="success" type="dispatcher">/list.jsp</result>
+		</action>
+		<action name="user_addInput" class="com.hanmote.action.UserAction" method="addInput">
+			<result name="success">/add.jsp</result>
+		</action>
+		<action name="user_add" class="com.hanmote.action.UserAction" method="add">
+			<!-- type="redirectAction"指的是跳转到Action -->
+			<result name="success" type="redirectAction">user_addInput</result>
+		</action>
+		<!-- 
+		<action name="organizationInfo_addInput" class="com.hanmote.action.OrganizationInfoAction" method="addInput">
+			<result name="success">/default/addSupplierBaseInfo.jsp</result>
+		</action>
+		<action name="organizationInfo_add" class="com.hanmote.action.OrganizationInfoAction" method="add">
+			<result name="success">/default/addSupplierBaseInfo.jsp</result>
+		</action>
+		 -->
+		<action name="organizationInfo_*" class="com.hanmote.action.OrganizationInfoAction" method="{1}">
+			<result name="success">/default/addSupplierBaseInfo.jsp</result>
+			<result name="error">/default/addSupplierBaseInfo.jsp</result>
+	    </action>
+	    <action name="capacityInfo_*" class="com.hanmote.action.CapacityInfoAction" method="{1}">
+			<result name="success">/default/addCapacityInfo.jsp</result>
+			<result name="error">/default/addCapacityInfo.jsp</result>
+	    </action>
+		<action name="financeInfo_addInput" class="com.hanmote.action.FinanceInfoAction" method="addInput">
+			<result name="success">/default/addFinanceInfo.jsp</result>
+		</action>
+		<action name="admin_login" class="com.hanmote.action.LoginAction" method="login">
+		</action>
+		<action name="login_loginsuc" class="com.hanmote.action.LoginAction" method="loginsuc">
+			<result name="success">/admin/index.jsp</result>
+		</action>
+		<action name="file_list" class="com.hanmote.action.LoginAction" method="list">
+			<result name="success">/admin/filemanager.jsp</result>
+		</action>
+		<action name="function_list" class="com.hanmote.action.LoginAction" method="tools">
+			<result name="success">/admin/tools.jsp</result>
+		</action>
+		
+		<action name="login_allmenunode" class="com.hanmote.action.MenuAction" method="getAllTreeNode">
+			<result name="success" type="redirectAction">login_loginsuc</result>
+		</action>
+		
+		<!-- 通配符的方式 -->
+		<!-- 
+		<action name="*_*" class="com.hanmote.action.{1}Action" method="{2}">
+		
+		</action>
+		 -->
+    </package>
+    <!-- 设置refreshModelBeforeResult属性为true -->
+ 	<package name="common" namespace="/" extends="struts-default">
+		<interceptors>
+			<interceptor-stack name="jlu-basic-stack">
+				<interceptor-ref name="modelDriven">
+		             <param name="refreshModelBeforeResult">true</param>
+		        </interceptor-ref>
+	        </interceptor-stack>
+		</interceptors>
+    </package>
+    <package name="base" namespace="/baseinfo" extends="struts-default">
+		<action name="organizationInfo_*" class="com.hanmote.action.OrganizationInfoAction" method="{1}">
+			<result name="success">/admin/baseinfo/organizationInfo.jsp</result>
+		</action>
+		<action name="financeInfo_*" class="com.hanmote.action.FinanceInfoAction" method="{1}">
+			<result name="success">/admin/baseinfo/financeInfo.jsp</result>
+		</action>
+		<action name="saleInfo_*" class="com.hanmote.action.FinanceInfoAction" method="{1}">
+			<result name="success">/admin/baseinfo/saleInfo.jsp</result>
+		</action>
+    </package>
+    <package name="ord" namespace="/order" extends="struts-default">
+		<action name="orderManage_*" class="com.hanmote.action.OrderAction" method="{1}">
+		</action>
+    </package>
+    <package name="agr" namespace="/agreement" extends="struts-default">
+		<action name="agreementManage_*" class="com.hanmote.action.AgreementAcion" method="{1}">
+		</action>
+    </package>
+    
+    <!-- 配置文件上传下载 -->
+    <package name="upload" namespace="/file" extends="struts-default">  
+        <action name="upload" class="com.hanmote.action.UploadAction">  
+            <result name="success">/default/fileupdate.jsp</result>  
+            <result name="error">/error.jsp</result>  
+            <!-- 默认最大文件为20M  -->
+            <param name="maximumSize">20971520</param>  
+            <param name="allowedTypes">text/plain,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document</param>  
+        </action> 
+        <action name="upload_input" class="com.hanmote.action.UploadAction" method="input">  
+        	<result name="success">/default/uploader.jsp</result>
+        </action> 
+        <action name="download" class="com.hanmote.action.DownloadAction">  
+            <!-- type="stream"用于处理文件下载 -->
+            <result name="success" type="stream">  
+            	<!-- 下载文件类型定义 -->  
+            	<param name="contentType">application/octet-stream;charset=utf-8</param>
+                <param name="inputName">inStream</param>  
+               	<!-- 下载文件处理方法 -->  
+                <param name="contentDisposition">attachment;filename="${fileName}"</param>  
+            </result>  
+        </action>  
+    </package>  
+</struts>

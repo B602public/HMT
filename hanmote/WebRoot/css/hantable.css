@@ -1,0 +1,14 @@
+/* 门户系统中table的样式*/
+table.hantable {font-family: verdana,arial,sans-serif;font-size:11px;color:#333333;
+	border-width: 1px;	border-color: #C0C0C0;border-collapse: collapse;width: 100%;}
+table.hantable th {	border-width: 1px;padding: 8px;	border-style: solid;border-color: #C0C0C0;
+	background-color: #F1F6FF;}
+table.hantable td {	border-width: 1px;padding: 8px;border-style: solid;
+	border-color: #C0C0C0;}
+.hantinput{border: solid 1px; border-color:#CCC #EEE #EEE #CCC;
+	height:20px;}
+table.hantable th.oddcolumn{background-color: #F1F6FF;}
+table.hantable th.evencolumn{background-color: #FAFCFF;}
+table.hantable td.oddcolumn{background-color: #F1F6FF;}
+table.hantable td.evencolumn{background-color: #FAFCFF;}
+.showinput{height:100%;width:100%;}

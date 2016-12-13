@@ -1,0 +1,16 @@
+p{text-indent:28px;}
+.blogList{clear:both;width:760px;}
+.blogList img{diplay:inline-block;width:600px;height:426px;}
+.blogListTitle{margin-left:20px;margin-top:20px;margin-bottom:10px;width:100%;height:182px;line-height:182px;}
+.blogListTitle .titleLeft{float:left;width:5px;height:100%;background:url(../images/titleleft.png) no-repeat;}
+.blogListTitle .titleMiddle{float:left;width:580px;height:100%;background:url(../images/titlemiddle.png) repeat-x;padding:0 18px;font-family:"΢���ź�","����","������","Arial Unicode MS";font-weight:bold;}
+.blogListTitle font{float:left;color:#e7161a;font-size:14px;margin-right:3px}
+.blogListTitle .titleMiddle a{margin-left:250px;display:block;color:#1184cd;text-decoration:none;font-size:15px}
+.blogListTitle .titleRight{float:left;width:5px;height:100%;background:url(../images/titleright.png) no-repeat}
+.blogListIntro{width:698px;padding-left: 30px;height:auto;line-height:22px;float:left;font-size:14px;position:relative;}
+.grayContent{color:#595959;text-align:left;}
+.blueText{color:#0178de}
+
+.viewTable{font-size:12px;text-align:center;float:left;width:600px;}
+.viewTable td{width:200px;height:250px;border:1px solid #dfdfdf;}
+.viewTable td img{width:239px;height:151px;}
